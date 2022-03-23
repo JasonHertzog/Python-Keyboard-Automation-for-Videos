@@ -14,3 +14,5 @@ while i < len(the_script):
     enterboard.release(Key.enter)
     i += 1
     keyboard.wait('shift')
+
+# I want this to also print the next 5 lines of the script to the console so that I know what to say while going through.
