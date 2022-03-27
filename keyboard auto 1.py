@@ -9,18 +9,28 @@ enterboard = Controller()
 # Keep hotkey set to shift, otherwise the script can break.
 hotkey = 'shift'
 
-the_script = ['Script goes here!', 'test', 'test']
+the_script = [''
+,''
+]
 
 
 # i is used for loop iterations.
 i = 0
 # p is used to control the print iterations.
 p = 0
+# This initial while loop will queue up the teleprompter before beginning to print text.
+# This is helpful for when you are beginning to record.
+while (p < len(the_script)) & ((p - i) != 11):
+        print(the_script[p])
+        p += 1
+# The following line resets p, which is important for the teleprompter to know bug out.
+p = i
 
 # This will cause the program to wait until we start pressing the hotkey to begin.
 keyboard.wait(hotkey)
 
-# While loop that provides main functionality to the script. 
+
+# This While loop provides main functionality to the script. 
 while i < len(the_script):
     # Types the text according to the script. Delay sets speed of each key.
     keyboard.write(the_script[i], delay=0.03)
@@ -44,5 +54,3 @@ while i < len(the_script):
     p = i
     # Wait for the hotkey again.
     keyboard.wait(hotkey)
-
-# I want this to also print the next 5 lines of the script to the console so that I know what to say while going through.
