@@ -87,10 +87,6 @@ def testloop(x=365, i=0):
             player_1.addxp(2, Player.raise_xp_med)
         
 
-# We need to move this to its own Main method at some point.
-if __name__ == '__main__':
-    print('\n' + player_1.checkxp())
-    testloop(14)
-    print('\n' + player_1.checkxp())
+
 
 
