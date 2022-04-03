@@ -14,43 +14,48 @@ if __name__ == '__main__':
     temp = input()
     if (temp == '1'):
         print('On a scale from 1-5, how much effort did you put in?')
-        if input() == '1':
-            Player.addxp(player_1, 1, 1)
-        if input() == '2':
-            Player.addxp(player_1, 1, 2)
-        if input() == '3':
-            Player.addxp(player_1, 1, 3)
-        if input() == '4':
-            Player.addxp(player_1, 1, 4)
-        if input() == '5':
-            Player.addxp(player_1, 1, 5)
+        temp = input()
+        if temp == '1':
+            Player.Player.addxp(player_1, 1, Player.Player.raise_xp_min)
+        if temp == '2':
+            Player.Player.addxp(player_1, 1, Player.Player.raise_xp_small)
+        if temp == '3':
+            Player.Player.addxp(player_1, 1, Player.Player.raise_xp_med)
+        if temp == '4':
+            Player.Player.addxp(player_1, 1, Player.Player.raise_xp_large)
+        if temp == '5':
+            Player.Player.addxp(player_1, 1, Player.Player.raise_xp_max)
     elif (temp == '2'):
         print('On a scale from 1-5, how much effort did you put in?')
-        if input() == '1':
-            Player.addxp(player_1, 2, 1)
-        if input() == '2':
-            Player.addxp(player_1, 2, 2)
-        if input() == '3':
-            Player.addxp(player_1, 2, 3)
-        if input() == '4':
-            Player.addxp(player_1, 2, 4)
-        if input() == '5':
-            Player.addxp(player_1, 2, 5)
+        temp = input()
+        if temp == '1':
+            Player.Player.addxp(player_1, 2, Player.Player.raise_xp_min)
+        if temp == '2':
+            Player.Player.addxp(player_1, 2, Player.Player.raise_xp_small)
+        if temp == '3':
+            Player.Player.addxp(player_1, 2, Player.Player.raise_xp_med)
+        if temp == '4':
+            Player.Player.addxp(player_1, 2, Player.Player.raise_xp_large)
+        if temp == '5':
+            Player.Player.addxp(player_1, 2, Player.Player.raise_xp_max)
     elif (temp == '3'):
         print('On a scale from 1-5, how much effort did you put in?')
-        if input() == '1':
-            Player.addxp(player_1, 3, 1)
-        if input() == '2':
-            Player.addxp(player_1, 3, 2)
-        if input() == '3':
-            Player.addxp(player_1, 3, 3)
-        if input() == '4':
-            Player.addxp(player_1, 3, 4)
-        if input() == '5':
-            Player.addxp(player_1, 3, 5)
+        temp = input()
+        if temp == '1':
+            Player.Player.addxp(player_1, 3, Player.Player.raise_xp_min)
+        if temp == '2':
+            Player.Player.addxp(player_1, 3, Player.Player.raise_xp_small)
+        if temp == '3':
+            Player.Player.addxp(player_1, 3, Player.Player.raise_xp_med)
+        if temp == '4':
+            Player.Player.addxp(player_1, 3, Player.Player.raise_xp_large)
+        if temp == '5':
+            Player.Player.addxp(player_1, 3, Player.Player.raise_xp_max)
     else: 
         print('\n' + Player.Player.checkxp(player_1))
         print('Invalid input. Restart program if you want to add experience')
+    
+    print('\n' + Player.Player.checkxp(player_1))
 
 
 
