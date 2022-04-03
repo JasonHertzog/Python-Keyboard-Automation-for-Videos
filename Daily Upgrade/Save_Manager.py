@@ -1,7 +1,7 @@
-import Player
+import Player, Private_Details
 from os.path import exists
 # Set this to desired directory.
-file_path = "C:\\Users\\Skilled Apple\\Documents\\GitHub"
+file_path = Private_Details.file_path
 
 def check_save_exists():
     # Check if file exists. If not, create it.

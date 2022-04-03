@@ -28,7 +28,7 @@ class Player:
     
     # Returns current stats in regards to total level and experience.
     def checkxp(self):
-        return ('Goals & Experience\n{}: {} \n{}: {} \n{}: {}'.format(self.goal1, format(self.xp1, '.2f'), self.goal2, format(self.xp2, '.2f'), self.goal3, format(self.xp3, '.2f')))
+        return ('Goals & Experience\n{} {} \n{} {} \n{} {}'.format(self.goal1, format(self.xp1, '.2f'), self.goal2, format(self.xp2, '.2f'), self.goal3, format(self.xp3, '.2f')))
 
     def addxp(self, goal, amount):
         # Create new line
@@ -80,8 +80,6 @@ class Player:
             return print('{}: Gained ~{}% Experience!'.format(self.goal3, format(amount, '.2f').rstrip('0').rstrip('.')).upper())
 
 
-# This will be replaced by input, but is currently used as a placeholder.
-# player_1 = Player('Jason', 'Programming', 'Running', 'Content Creation')
 
 # Create your player.
 def create_player():

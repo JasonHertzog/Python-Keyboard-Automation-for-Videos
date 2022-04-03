@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     print('\n' + Player.Player.checkxp(player_1))
     print('\nWhat would you like to increase XP in?')
-    print('1 = ' + goal1 + '\n2= ' + goal2 + '\n3= ' + goal3)
+    print('1 = ' + goal1 + '2 = ' + goal2 + '3 = ' + goal3)
     temp = input()
     if (temp == '1'):
         print('On a scale from 1-5, how much effort did you put in?')
