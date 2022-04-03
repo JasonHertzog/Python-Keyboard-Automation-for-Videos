@@ -82,6 +82,7 @@ class Player:
 
 
 # Create your player.
+# This player will be saved after completion.
 def create_player():
     print('Enter your name')
     temp_name = input()
@@ -94,10 +95,11 @@ def create_player():
     player_0 = Player(temp_name, temp_goal1, temp_goal2, temp_goal3, xp1=0.504, xp2=0.503, xp3=0.502)
     print('Hello ' + player_0.name + '! Good luck with your goals!!')
 
-    # Initializes save file.
+    # Initializes save file. The second arg 'x' creates the save file.
     save_file = open(Save_Manager.file_path + "daily_upgrade_save.txt", 'x')
     save_file.close()
     with open(Save_Manager.file_path + 'daily_upgrade_save.txt', 'a') as f:
+        # Store the save values with initial values.
             f.write(player_0.name)
             f.write('\n')
             f.write(player_0.goal1)
@@ -114,12 +116,65 @@ def create_player():
             f.write('\n')
     
 
-
+# Used for testing purposes (XP gains currently)
 def testloop(self, x=365, i=0):
         for i in range (i, x):
             Player.addxp(self, 2, Player.raise_xp_med)
         
 
 
-
+def increase_xp_prompt(self):
+    print('\nWhat would you like to increase XP in?')
+    # Display options to user.
+    print('1 = ' + self.goal1 + '2 = ' + self.goal2 + '3 = ' + self.goal3)
+    # Create and store temporary variable for choice of player.
+    temp = input()
+    if (temp == '1'):
+        # User chooses to add XP to goal 1
+        print('On a scale from 1-5, how much effort did you put in?')
+        temp = input()
+        if temp == '1':
+            Player.addxp(self, 1, Player.raise_xp_min)
+        if temp == '2':
+            Player.addxp(self, 1, Player.raise_xp_small)
+        if temp == '3':
+            Player.addxp(self, 1, Player.raise_xp_med)
+        if temp == '4':
+            Player.addxp(self, 1, Player.raise_xp_large)
+        if temp == '5':
+            Player.addxp(self, 1, Player.raise_xp_max)
+    elif (temp == '2'):
+        # User chooses to add XP to goal 2
+        print('On a scale from 1-5, how much effort did you put in?')
+        temp = input()
+        if temp == '1':
+            Player.addxp(self, 2, Player.raise_xp_min)
+        if temp == '2':
+            Player.addxp(self, 2, Player.raise_xp_small)
+        if temp == '3':
+            Player.addxp(self, 2, Player.raise_xp_med)
+        if temp == '4':
+            Player.addxp(self, 2, Player.raise_xp_large)
+        if temp == '5':
+            Player.addxp(self, 2, Player.raise_xp_max)
+    elif (temp == '3'):
+        # User chooses to add XP to goal 3
+        print('On a scale from 1-5, how much effort did you put in?')
+        temp = input()
+        if temp == '1':
+            Player.addxp(self, 3, Player.raise_xp_min)
+        if temp == '2':
+            Player.addxp(self, 3, Player.raise_xp_small)
+        if temp == '3':
+            Player.addxp(self, 3, Player.raise_xp_med)
+        if temp == '4':
+            Player.addxp(self, 3, Player.raise_xp_large)
+        if temp == '5':
+            Player.addxp(self, 3, Player.raise_xp_max)
+    else: 
+        # No valid response, so do nothing.
+        print('\n' + Player.checkxp(self))
+        print('Invalid input. Restart program if you want to add experience')
+    # End by showing player XP.
+    print('\n' + Player.checkxp(self))
 

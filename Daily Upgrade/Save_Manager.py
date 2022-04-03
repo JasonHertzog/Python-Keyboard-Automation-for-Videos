@@ -15,12 +15,14 @@ def check_save_exists():
 
 def load_file():
     with open(file_path + 'daily_upgrade_save.txt', 'r') as f:
+        # Loads the values and places the values into a data array.
         data = f.readlines()
-        print(data)
+        # print(data)
         return(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
 
 def save_file(self):
     with open(file_path + 'daily_upgrade_save.txt', 'w') as f:
+        # This OVERWRITES the individual updates to the save file that exists.
         f.write(self.name)
         f.write(self.goal1) 
         f.write(self.goal2)
