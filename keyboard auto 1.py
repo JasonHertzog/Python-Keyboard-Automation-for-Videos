@@ -9,9 +9,13 @@ enterboard = Controller()
 # Keep hotkey set to shift, otherwise the script can break.
 hotkey = 'shift'
 
-the_script = [''
-,''
-]
+directory = "C:\\Users\\Jhert\\OneDrive\\Documents\\Notepad ++\\Learn Java\\"
+file = open(directory + "placeholder", 'r')
+f = file.readlines()
+
+the_script = []
+for line in f:
+    the_script.append(line.strip())
 
 
 # i is used for loop iterations.
@@ -54,3 +58,4 @@ while i < len(the_script):
     p = i
     # Wait for the hotkey again.
     keyboard.wait(hotkey)
+
